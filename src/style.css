@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+html, body, #scene { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { background: #09141d; }
+#scene { position: relative; touch-action: none; }
+#scene canvas { display: block; width: 100%; height: 100%; }
+#scene::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 45%, transparent 42%, rgba(3, 10, 17, .5) 100%),
+              linear-gradient(0deg, rgba(3, 10, 17, .19), transparent 21%, transparent 83%, rgba(3, 10, 17, .24));
+}
